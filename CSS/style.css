@@ -1,0 +1,303 @@
+/* Déclaration police custom */
+/* @font-face {
+    font-family: 'compass';
+    src: url(../ressources/fonts/TEXAT\ BOLD\ PERSONAL\ USE___.otf);
+    font-weight: normal;
+    font-size: normal;
+} */
+
+/* Application de la police sur tous les titres */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'compass';
+}
+
+p {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* En-tête */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    /* classe flexbox, qui contient des blocks et gère leurs disposition . Elle contient un titre et un nav */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* header + nav */
+header h1 a {
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    font-family: cursive;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Fin En-tête */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Main */
+.hero {
+    background: linear-gradient(to left, #FFFFFF, #ACC8E0);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #0078ff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Section Produits */
+.products {
+    padding: 40px 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    /* flex wrap permet le retour à la ligne */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    /* Animation */
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-item h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.product-item .price {
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.product-item .button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-item .button:hover {
+    background-color: #218838;
+}
+
+/* Pied de Page */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+footer ul li {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Pour les tablettes (largeur max de 768px) */
+@media (max-width: 768px) {
+
+    /* En-tête */
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Produits */
+    .product-item {
+        width: 45%;
+        /* Deux produits côte à côte */
+    }
+}
+
+/* Pour les mobiles (largeur max de 480px) */
+@media (max-width: 480px) {
+
+    /* En-tête */
+    header .container {
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* Section Hero */
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+    }
+
+    /* Produits */
+    .product-item {
+        width: 90%;
+        /* Un prduit par ligne */
+        margin: 0 auto;
+    }
+
+    /* Pied de page */
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+
+/* ---------------------------------------------------------------------------------- Page 4 --------------------------------------------------------------------------------------*/
+#Formulaire {
+    display: inline;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+input,
+select {
+    display: flex;
+    margin: 0px 0 20px 20px;
+}
+
+label {
+    font-size: 1.4em;
+}
+
+#buttonSubmit{
+    border-radius: 5px;
+}
+
+#confirmationMessage {
+    display: none;
+    color: green;
+    font-size: 0.9em;
+}
+
+#error {
+    display: none;
+    color: red;
+    font-size: 0.9em;
+}
