@@ -21,7 +21,7 @@ try {
     let users = await response.json();
     console.log(users);
     // Récupération des 100 users
-    for (let i = 0; i > 100; i++) {
+    for (let i = 0; i < 100; i++) {
         // L'user de l'itération
         let user = users[i];
         // Crée un élément dans le DOM

@@ -31,7 +31,7 @@ header {
 header .container {
     /* classe flexbox, qui contient des blocks et gère leurs disposition . Elle contient un titre et un nav */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: auto;
@@ -167,7 +167,7 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 footer .container {
@@ -271,23 +271,46 @@ footer ul li a:hover {
 
 /* ---------------------------------------------------------------------------------- Page 4 --------------------------------------------------------------------------------------*/
 #Formulaire {
-    display: inline;
     text-align: center;
-    flex-wrap: wrap;
+    padding: 20px 0;
 }
 
 input,
 select {
-    display: flex;
     margin: 0px 0 20px 20px;
 }
 
 label {
     font-size: 1.4em;
+    font-style: italic;
 }
 
-#buttonSubmit{
+#UserID,
+#titre,
+#body {
+    width: 5rem;
+}
+
+#UserID:focus,
+#titre:focus {
+    width: 10rem;
+}
+
+#body:focus {
+    height: 5rem;
+    width: 50rem;
+}
+
+#buttonSubmit {
     border-radius: 5px;
+    background-color: #8800ff;
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+#buttonSubmit:hover {
+    background-color: #5f00b3;
 }
 
 #confirmationMessage {
