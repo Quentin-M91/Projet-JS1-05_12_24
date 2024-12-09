@@ -11,12 +11,12 @@ document.getElementById('Formulaire').addEventListener('submit', function (event
 
 
     if (UserID < 1 || UserID >= 100) {
-        errorMessage += 'L\'ID Utilisateur ne peut pas être supérieur à 100.<br>';
+        errorMessage += 'L\'ID Utilisateur doit être compris entre 1 et 100.<br>';
         isValid = false;
     }
 
-    if (titre.length < 1 || titre.length > 10) {
-        errorMessage += 'Le titre ne doit pas dépasser 10 caractères.<br>';
+    if (titre.length < 1 || titre.length > 30) {
+        errorMessage += 'Le titre ne doit pas dépasser 30 caractères.<br>';
         isValid = false;
     }
 
