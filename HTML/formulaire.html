@@ -16,11 +16,17 @@
         </div>
     </header>
     <script type="module" src="../JS/Formulaire.js"></script>
+    <main>
+        <section class="hero">
+            <h2>Bienvenue dans la création de posts !</h2>
+            <p>Créé votre propre post et poster le directement via cette page.</p>
+        </section>
+    </main>
 
     <form id="Formulaire">
         <label for="UserID">User ID :</label>
         <br>
-        <input [type="number"]::-webkit-inner-spin-button{-webkit-appearance:none} id="UserID" name="UserID" ></input>
+        <input [type="number" ]::-webkit-inner-spin-button{-webkit-appearance:none} id="UserID" name="UserID"></input>
         <br>
 
         <label for="titre">Titre :</label>
@@ -30,7 +36,7 @@
 
         <label for="body">Contenu :</label>
         <br>
-        <textarea type="text" id="body" maxlenght="255" name="body" ></textarea> <!-- esssayer textarea -->
+        <textarea type="text" id="body" maxlenght="255" name="body"></textarea> <!-- esssayer textarea -->
         <br>
 
         <button id="buttonSubmit" type="submit">Envoyer</button>
@@ -38,16 +44,17 @@
         <p id="confirmationMessage">Post créé avec succès !</p>
         <p id="error"></p>
     </form>
-    
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Mon projet. Tous droits réservées.</p>
             <ul>
-                <li><a href="?">Politique de confidentialité</a></li>
-                <li><a href="?">Conditions d'utilisations</a></li>
-                <li><a href="?">FAQ</a></li>
+                <li>Quentin.M</li>
+                <li>Mohamed.A</li>
+                <li>Jérôme.F</li>
             </ul>
         </div>
     </footer>
 </body>
+
 </html>
