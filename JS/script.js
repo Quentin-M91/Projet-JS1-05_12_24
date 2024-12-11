@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const postLink = document.createElement("a");
             postLink.textContent = "Page 3 - Le post de l'user";
-            postLink.href = `../HTML/page3.html?postId=${post.id}`;
+            postLink.href = `../HTML/post-utilisateur.html?postId=${post.id}`;
             postLink.classList.add("button");
             postElement.appendChild(postLink);
 

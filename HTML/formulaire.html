@@ -16,6 +16,8 @@
         </div>
     </header>
     <script type="module" src="../JS/Formulaire.js"></script>
+    <script src="https://kit.fontawesome.com/586db9acc9.js" crossorigin="anonymous"></script>
+
     <main>
         <section class="hero">
             <h2>Bienvenue dans la création de posts !</h2>
@@ -24,22 +26,22 @@
     </main>
 
     <form id="Formulaire">
-        <label for="UserID">User ID :</label>
+        <label for="UserID"><i class="fa-solid fa-id-card"></i>&nbsp; - User ID :</label>
         <br>
         <input [type="number" ]::-webkit-inner-spin-button{-webkit-appearance:none} id="UserID" name="UserID"></input>
         <br>
 
-        <label for="titre">Titre :</label>
+        <label for="titre"><i class="fa-solid fa-heading"></i>&nbsp; - Titre :</label>
         <br>
         <input type="text" id="titre" name="titre"></input>
         <br>
 
-        <label for="body">Contenu :</label>
+        <label for="body"><i class="fa-solid fa-comment"></i>&nbsp; - Contenu :</label>
         <br>
         <textarea type="text" id="body" maxlenght="255" name="body"></textarea> <!-- esssayer textarea -->
         <br>
 
-        <button id="buttonSubmit" type="submit">Envoyer</button>
+        <button id="buttonSubmit" type="submit"><i class="fa-solid fa-paper-plane"></i>&nbsp; Envoyer</button>
 
         <p id="confirmationMessage">Post créé avec succès !</p>
         <p id="error"></p>
@@ -49,6 +51,7 @@
         <div class="container">
             <p>&copy; 2024 Mon projet. Tous droits réservées.</p>
             <ul>
+                <li><i class="fa-regular fa-user"></i></li>
                 <li>Quentin.M</li>
                 <li>Mohamed.A</li>
                 <li>Jérôme.F</li>

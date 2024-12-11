@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const [comments, user] = await Promise.all([
       fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`).then(res => res.json()),
       fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`).then(res => res.json()),
-    ]);
+    ]); 
 
     // Exemple pour un fetch :
     const checkResponse = (response) => {
@@ -26,11 +26,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     title.textContent = post.title;
 
     const body = document.createElement("p");
+    body.id = "contenu-post";
     body.textContent = post.body;
 
     const userInfo = document.createElement("p");
     const strongElement = document.createElement("strong");
-    strongElement.textContent = "Posté par: ";
+    strongElement.textContent = "Posté par : ";
+    userInfo.id = "auteur";
     userInfo.appendChild(strongElement);
     userInfo.appendChild(document.createTextNode(user.name));
 
@@ -45,12 +47,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Count total comments and display the number
     const commentCount = comments.reduce((count, comment) => count + 1, 0);
     const commentCountParagraph = document.createElement("p");
+    commentCountParagraph.id = "compteur-coms";
     commentCountParagraph.textContent = `Total comments: ${commentCount}`;
 
     // Create delete button
     const deleteButton = document.createElement("button");
     deleteButton.id = "delete-post";
-    deleteButton.textContent = "Suppresion";
+    deleteButton.innerHTML = '<i class="fa fa-trash"></i>';
 
     // Append elements to container
     container.appendChild(title);
@@ -67,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           method: "DELETE",
         });
         if (response.ok) {
-          container.textContent = "Le post a été supprimé !";
+          container.innerHTML = 'Le post a été supprimé ! &nbsp;<i class="fa-solid fa-check"></i>';
         } else {
           container.textContent = "Le post n'a pas été supprimé !";
         }

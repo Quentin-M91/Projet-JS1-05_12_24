@@ -16,6 +16,7 @@ p {
 /* En-tête */
 header {
     background-color: #333;
+    background: linear-gradient(to right, #333 20%, #ACC8E0,  #333 80%);
     color: #fff;
     padding: 20px 0;
 }
@@ -32,7 +33,7 @@ header .container {
 
 /* header + nav */
 header h1 a {
-    font-size: 1,3em;
+    font-size: 1, 3em;
     color: #fff;
     text-decoration: none;
 }
@@ -41,7 +42,7 @@ header h1 a {
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* Main */
 .hero {
-    background: linear-gradient(to left, #FFFFFF, #ACC8E0);
+    background: linear-gradient(to left, #FFFFFF, #ACC8E0, #FFFFFF);
     text-align: center;
     padding: 50px 20px;
 }
@@ -230,9 +231,81 @@ footer ul {
 
 }
 
+/* ---------------------------------------------------------------------------------- Page 2 --------------------------------------------------------------------------------------*/
+
+.hero2 {
+    background: linear-gradient(to left, #FFFFFF, #ACC8E0, #FFFFFF);
+    text-align: center;
+    padding: 40px 20px 15px 20px;
+}
+
+.hero2 h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero2 p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+
+
 /* ---------------------------------------------------------------------------------- Page 3 --------------------------------------------------------------------------------------*/
 
+#log-post-details {
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #005c91;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
 
+#log-post-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 15px black;
+}
+
+#auteur {
+    font-style: oblique;
+}
+
+#compteur-coms {
+    border: 1px solid; 
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#contenu-post {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+#log-post-details ul {
+    list-style: none;
+    display: flex;
+    text-align: start;
+    gap: 15px;
+    padding: 0px;
+}
+
+#log-post-details li {
+    border: 1px solid;
+    padding: 5px;
+
+}
+
+#delete-post {
+    padding: 10px 20px;
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+}
+
+#delete-post:hover {
+    background-color: #810000;
+}
 
 /* ---------------------------------------------------------------------------------- Page 4 --------------------------------------------------------------------------------------*/
 #Formulaire {
