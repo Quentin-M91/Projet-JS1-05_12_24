@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const [comments, user] = await Promise.all([
       fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`).then(res => res.json()),
       fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`).then(res => res.json()),
-    ]); 
+    ]);
 
     // Exemple pour un fetch :
     const checkResponse = (response) => {
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Create delete button
     const deleteButton = document.createElement("button");
     deleteButton.id = "delete-post";
-    deleteButton.innerHTML = '<i class="fa fa-trash"></i>';
+    deleteButton.innerHTML = '<i class="fa fa-trash fa-beat-fade"></i>';
 
     // Append elements to container
     container.appendChild(title);

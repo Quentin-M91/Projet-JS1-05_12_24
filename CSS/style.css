@@ -1,9 +1,12 @@
+@font-face {
+    font-family: 'compass';
+    src: url(../Ressources/fonts/Fast\ Hand.otf);
+    font-weight: normal;
+    font-size: normal;
+}
+
 /* Application de la police sur tous les titres */
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1 {
     font-family: 'compass';
 }
 
@@ -12,12 +15,15 @@ p {
     font-family: Arial, sans-serif;
 }
 
+body {
+    background-color: #E0E0E0;
+}
 
 /* En-tête */
 header {
-    background-color: #333;
-    background: linear-gradient(to right, #333 20%, #ACC8E0,  #333 80%);
-    color: #fff;
+    border-radius: 10px 10px 0 0;
+    background-color: #003366;
+    color: #FF9900;
     padding: 20px 0;
 }
 
@@ -28,13 +34,17 @@ header .container {
     align-items: center;
     max-width: 1200px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 10px;
+    font-size: 2em;
+    letter-spacing: 5px;
+    ;
 }
+
 
 /* header + nav */
 header h1 a {
-    font-size: 1, 3em;
-    color: #fff;
+    font-size: 1, 5em;
+    color: #FF9900;
     text-decoration: none;
 }
 
@@ -42,7 +52,7 @@ header h1 a {
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* Main */
 .hero {
-    background: linear-gradient(to left, #FFFFFF, #ACC8E0, #FFFFFF);
+    background: linear-gradient(to top, #E0E0E0, #003366 100%);
     text-align: center;
     padding: 50px 20px;
 }
@@ -58,7 +68,7 @@ header h1 a {
 }
 
 .cta-button {
-    background-color: #0078ff;
+    background-color: #FF9900;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -66,13 +76,13 @@ header h1 a {
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #c47602;
 }
 
 /* Section Produits */
 .products {
     padding: 40px 20px;
-    background-color: #fff;
+    background-color: #E0E0E0;
     max-width: 1200px;
     margin: auto;
 }
@@ -95,9 +105,13 @@ header h1 a {
     gap: 20px;
 }
 
+.product-list h3 {
+    color: #003366;
+}
+
 .product-item {
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    border: 2px solid #003366;
     border-radius: 8px;
     padding: 20px;
     width: 30%;
@@ -107,6 +121,7 @@ header h1 a {
 
 .product-item:hover {
     transform: translateY(-5px);
+    box-shadow: 8px 8px 10px black;
     /* Animation */
 }
 
@@ -122,7 +137,7 @@ header h1 a {
 }
 
 .product-item .button {
-    background-color: #28a745;
+    background-color: #FF9900;
     color: #fff;
     padding: 10px 15px;
     text-decoration: none;
@@ -130,12 +145,13 @@ header h1 a {
 }
 
 .product-item .button:hover {
-    background-color: #218838;
+    background-color: #c47602;
 }
 
 /* Pied de Page */
 footer {
-    background-color: #333;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(to bottom, #E0E0E0, #003366 25%);
     color: #fff;
     padding: 20px 0;
     margin-top: 20px;
@@ -234,7 +250,7 @@ footer ul {
 /* ---------------------------------------------------------------------------------- Page 2 --------------------------------------------------------------------------------------*/
 
 .hero2 {
-    background: linear-gradient(to left, #FFFFFF, #ACC8E0, #FFFFFF);
+    background: linear-gradient(to top, #E0E0E0, #003366 100%);
     text-align: center;
     padding: 40px 20px 15px 20px;
 }
@@ -272,7 +288,7 @@ footer ul {
 }
 
 #compteur-coms {
-    border: 1px solid; 
+    border: 1px solid;
     border-radius: 10px;
     padding: 5px;
 }
@@ -341,14 +357,14 @@ label {
 
 #buttonSubmit {
     border-radius: 5px;
-    background-color: #8800ff;
+    background-color: #FF9900;
     color: #fff;
     padding: 10px 10px;
     text-decoration: none;
 }
 
 #buttonSubmit:hover {
-    background-color: #5f00b3;
+    background-color: #c47602;
 }
 
 #confirmationMessage {
@@ -361,4 +377,13 @@ label {
     display: none;
     color: red;
     font-size: 0.9em;
+}
+
+.icon {
+    animation: flip 2s infinite linear;
+    animation-play-state: running;
+}
+
+.icon:hover {
+    animation-play-state: paused;
 }
